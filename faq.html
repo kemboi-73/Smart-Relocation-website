@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Movers || FAQs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">
+            Frequenty Asked Questions
+        </h1>
+        <main class="accordion">
+            <div class="faq-img">
+                <img src="img/faq.svg" alt="" class="accordion-img">
+            </div>
+            <div class="content-accordion">
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            What measures do you take to ensure the safety of my items during the move?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>We take every precaution to safeguard your belongings during the move. Our team uses proper packing techniques, secure loading and unloading practices, and protective padding to prevent damage.</p>
+                    </div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            How do I request a quote for my move?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>You can request a quote by filling out the contact form on our website, giving us a call, or sending us an email. Our team will respond promptly with a customized quote.</p>
+                    </div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            Do you provide packing materials and supplies?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>Yes, we offer a range of packing materials and supplies, including boxes, packing tape, bubble wrap, and more. You can purchase these items through our website or inquire about them when booking our packing services.</p>
+                    </div>
+                </div>
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            Can I rent a truck from your company for a DIY move?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>Absolutely! We offer truck rental services for those who prefer to handle their own moves. Our trucks are well-maintained and available in various sizes to accommodate your needs.</p>
+                    </div>
+                </div>
+
+            <div class="content-accordion">
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            What types of moving services do you offer?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>We provide a wide range of moving services, including local and long-distance moves, packing and unpacking, truck rentals, and storage solutions. We tailor our services to meet your specific needs.</p>
+                    </div>
+                </div>
+
+                <div class="content-accordion">
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            What types of moving services do you offer?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>We provide a wide range of moving services, including local and long-distance moves, packing and unpacking, truck rentals, and storage solutions. We tailor our services to meet your specific needs.</p>
+                    </div>
+                </div>
+
+
+                <div class="question-answer">
+                    <div class="question">
+                        <h3 class="title-question">
+                            How far in advance should I schedule my move?
+                        </h3>
+                        <button class="question-btn">
+                            <span class="up-icon">
+                                <i class="fas fa-chevron-up"></i>
+                            </span>
+                            <span class="down-icon">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="answer">
+                        <p>We recommend scheduling your move as far in advance as possible to secure your preferred date. However, we can often accommodate last-minute requests, so don't hesitate to reach out to us.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const questions = document.querySelectorAll('.question-answer');
+
+questions.forEach(function(question) {
+    const btn = question.querySelector('.question-btn');
+    btn.addEventListener("click", function() {
+        questions.forEach(function(item) {
+            if (item !== question) {
+                item.classList.remove("show-text");
+            }
+        })
+        question.classList.toggle("show-text");
+    })
+}) 
+</script>
+</body>
+</html>
