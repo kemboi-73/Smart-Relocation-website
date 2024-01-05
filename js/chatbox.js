@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     callButton.addEventListener('click', function() {
         // Implement code to initiate a call to the company owner here
         // For security reasons, consider using a phone link instead of JavaScript
-        window.location.href = "tel:0721601159";
+        window.location.href = "tel:0705156233";
     });
 });
 
