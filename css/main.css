@@ -2,6 +2,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff; /* You can set your desired background color */
+  z-index: 1000; /* Set a high z-index to ensure the menu is on top of other elements */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Adjust the width of your logo */
+  height: auto;
+  margin-right: 10px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  margin-right: 20px;
+}
+
+.overlay {
+  display: none; /* Make sure the overlay is initially hidden */
+}
+
+/* Add the following styles for the hamburger menu */
+.hamburger-menu {
+  display: none; /* Make sure the hamburger menu is initially hidden */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333; /* Adjust the color of the hamburger menu bars */
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Add a class to indicate that the menu is open */
+.menu-open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adjust the background color of the mobile menu */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    z-index: 999; /* Set a high z-index to ensure the menu is on top */
+  }
+
+  .links.show {
+    display: flex;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
 
 
 
