@@ -1018,3 +1018,20 @@ header .container {
 
 
 
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adjust the background color of the mobile menu */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    z-index: 999; /* Set a high z-index to ensure the menu is on top */
+  }
+
+  .links.show {
+    display: flex;
+  }
+}
