@@ -1142,6 +1142,63 @@ header .container {
 
 /* End Footer */
 
+.footer {
+  padding: 4rem 0;
+}
+
+.footer-links a {
+  font-size: 1rem;
+}
+
+.footer .title-sm {
+  margin-bottom: 0.5rem;
+}
+
+.footer-input-wrap {
+  height: 36px;
+  margin-top: 0.8rem;
+}
+
+.footer-input {
+  font-size: 0.9rem;
+  padding: 0 1.2rem;
+}
+
+.input-arrow {
+  font-size: 1.2rem;
+}
+
+.copyright .text {
+  font-size: 0.95rem;
+}
+
+.followme h3 {
+  font-size: 1.05rem;
+}
+
+.followme .footer-line {
+  margin: 0 0.8rem;
+}
+
+.social-media a {
+  font-size: 1.05rem;
+}
+
+.back-btn-wrap {
+  margin-left: 1.3rem;
+}
+
+.back-btn {
+  width: 43px;
+  height: 43px;
+  font-size: 0.9rem;
+}
+
+.back-btn-wrap:before {
+  width: 45px;
+  height: 45px;
+}
+
 
 
 @media screen and (max-width: 768px) {
