@@ -1,73 +1,3 @@
-
-
-$(document).ready(function(){
-
-    // wow initiation
-    new WOW().init();
-
-    // navigation bar toggle
-    $('#navbar-toggler').click(function(){
-        $('.navbar-collapse').slideToggle(400);
-    });
-
-    // navbar bg change on scroll
-    $(window).scroll(function(){
-        let pos = $(window).scrollTop();
-        if(pos >= 100){
-            $('.navbar').addClass('cng-navbar');
-        } else {
-            $('.navbar').removeClass('cng-navbar');
-        }
-    });
-
-    // sample video popup
-    $(document).ready(function() {
-        $('.popup-youtube').magnificPopup({
-            disableOn: 700,
-            type: 'iframe',
-            mainClass: 'mfp-fade',
-            removalDelay: 160,
-            preloader: false,
-    
-            fixedContentPos: false
-        });
-    });
-
-    // team carousel 
-    $('.team .owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        dots: true,
-        nav: false,
-        responsiveClass: true,
-        responsive:{
-            0:{
-                items: 1
-            }, 
-            600:{
-                items: 2
-            },
-            1000:{
-                items: 3
-            }
-        }
-    });
-
-    // faq accordion
-    $('.faq-head').each(function(){
-        $(this).click(function(){
-            $(this).next().toggleClass('show-faq-content');
-            let icon = $(this).children('span').children("i").attr('class');
-
-            if(icon == "fas fa-plus"){
-                $(this).children('span').html('<i class = "fas fa-minus"></i>');
-            } else {
-                $(this).children('span').html('<i class = "fas fa-plus"></i>');
-            }
-        });
-    });
-
     // testimonial carousel 
     $('.testimonial .owl-carousel').owlCarousel({
         loop: true,
@@ -76,9 +6,6 @@ $(document).ready(function(){
         nav: false,
         items: 1
     });
-
-});
-
 const questions = document.querySelectorAll('.question-answer');
 
 questions.forEach(function(question) {
@@ -233,4 +160,54 @@ document.addEventListener('DOMContentLoaded', function () {
       links.classList.toggle('show');
     });
   });
-  
+  // Select The Elements
+var toggle_btn;
+var big_wrapper;
+var hamburger_menu;
+
+function declare() {
+  toggle_btn = document.querySelector(".toggle-btn");
+  big_wrapper = document.querySelector(".big-wrapper");
+  hamburger_menu = document.querySelector(".hamburger-menu");
+}
+
+const main = document.querySelector("main");
+
+declare();
+
+let dark = false;
+
+function toggleAnimation() {
+  // Clone the wrapper
+  dark = !dark;
+  let clone = big_wrapper.cloneNode(true);
+  if (dark) {
+    clone.classList.remove("light");
+    clone.classList.add("dark");
+  } else {
+    clone.classList.remove("dark");
+    clone.classList.add("light");
+  }
+  clone.classList.add("copy");
+  main.appendChild(clone);
+
+  document.body.classList.add("stop-scrolling");
+
+  clone.addEventListener("animationend", () => {
+    document.body.classList.remove("stop-scrolling");
+    big_wrapper.remove();
+    clone.classList.remove("copy");
+    // Reset Variables
+    declare();
+    events();
+  });
+}
+
+function events() {
+  toggle_btn.addEventListener("click", toggleAnimation);
+  hamburger_menu.addEventListener("click", () => {
+    big_wrapper.classList.toggle("active");
+  });
+}
+
+events();
