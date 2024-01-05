@@ -1015,14 +1015,6 @@ header .container {
   justify-items: self-end;
 }
 
-.copyright { text-align: center; }
 
-}
-.footer-top { grid-template-columns: 1fr 1fr; }
-
-}
-.footer-top { padding-block: 60px; 
-}
-}
 
 

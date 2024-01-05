@@ -43,7 +43,7 @@ body{
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
-.left{
+/* .left{
 	background: url("https://images.theconversation.com/files/475867/original/file-20220725-26-qoohe1.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip") no-repeat center;
 	background-size: cover;
 	height: 100%;
@@ -51,7 +51,7 @@ body{
 
 .right{
 	padding: 25px 40px;
-}
+} */
 
 h2{
 	position: relative;
