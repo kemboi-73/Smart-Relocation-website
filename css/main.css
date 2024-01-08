@@ -1001,7 +1001,7 @@ body {
   transform: translateX(-50%);
   height: 2px;
   width: 5rem;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .section__grid {
@@ -1089,10 +1089,10 @@ body {
   color: var(--white);
 }
 
-.section__card:hover :is(p, h6) {
+/*.section__card:hover :is(p, h6) {
   color: var(--secondary-color);
 }
-
+*/
 .section__card:hover img {
   border-color: var(--white);
 }
