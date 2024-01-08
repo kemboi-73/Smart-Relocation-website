@@ -1124,3 +1124,12 @@ body {
   }
 }
 
+/* Example CSS rule for hiding the hamburger menu by default */
+.hamburger-menu {
+  display: none;
+}
+
+/* Example CSS rule for showing the hamburger menu when the "active" class is present */
+.big-wrapper.active .hamburger-menu {
+  display: block;
+}
