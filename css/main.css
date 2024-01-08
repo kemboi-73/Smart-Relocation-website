@@ -1096,3 +1096,21 @@ body {
 .section__card:hover img {
   border-color: var(--white);
 }
+
+
+
+/* Add this media query at the end of your existing CSS */
+@media (max-width: 768px) {
+  .section__grid {
+    grid-template-columns: 1fr; /* Set the grid to one column for smaller screens */
+  }
+
+  .section__card {
+    width: 100%; /* Make the cards take up the full width */
+  }
+
+  /* Adjust other styles as needed for better mobile experience */
+  .section__card::before {
+    width: 100%; /* Adjust the width for the circular background */
+  }
+}
