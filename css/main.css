@@ -1120,3 +1120,14 @@ body {
   }
 }
 
+/* Add this CSS to provide a smooth transition for mobile users */
+.section__card {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Adjust the hover styles for mobile users */
+@media (hover: none) {
+  .section__card:hover {
+    transform: none; /* Remove the transform on hover for touch devices */
+  }
+}
