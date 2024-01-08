@@ -1100,7 +1100,15 @@ body {
 
 
 
-/* For touch devices (like phones) */
+
+/* Styles for devices with hover state (like computers) */
+.section__card:hover {
+  /* Add your hover styles here */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Styles for touch devices (like phones) */
 @media (hover: none) {
   .section__card {
     /* Add styles suitable for touch devices here */
@@ -1109,3 +1117,5 @@ body {
     background-color: var(--white);
   }
 }
+
+
