@@ -1080,7 +1080,7 @@ body {
   color: var(--text-light);
   transition: 0.3s;
 }
-
+/*
 .section__card:hover::before {
   width: 400%;
 }
@@ -1089,14 +1089,14 @@ body {
   color: var(--white);
 }
 
-/*.section__card:hover :is(p, h6) {
+.section__card:hover :is(p, h6) {
   color: var(--secondary-color);
 }
-*/
+
 .section__card:hover img {
   border-color: var(--white);
 }
-
+*/
 
 
 
