@@ -1,10 +1,31 @@
+// Select The Elements
+var toggle_btn;
+var big_wrapper;
+var hamburger_menu;
+
+function declare() {
+  toggle_btn = document.querySelector(".toggle-btn");
+  big_wrapper = document.querySelector(".big-wrapper");
+  hamburger_menu = document.querySelector(".hamburger-menu");
+}
+
+const main = document.querySelector("main");
+
+declare();
+
+let dark = false;
+
 function toggleAnimation() {
-  // Clone the wrapper along with the hamburger menu
+  // Clone the wrapper
+  dark = !dark;
   let clone = big_wrapper.cloneNode(true);
-
-  // Toggle the active class for the hamburger menu
-  clone.classList.toggle("active");
-
+  if (dark) {
+    clone.classList.remove("light");
+    clone.classList.add("dark");
+  } else {
+    clone.classList.remove("dark");
+    clone.classList.add("light");
+  }
   clone.classList.add("copy");
   main.appendChild(clone);
 
@@ -19,3 +40,14 @@ function toggleAnimation() {
     events();
   });
 }
+
+function toggleHamburgerMenu() {
+  big_wrapper.classList.toggle("active");
+}
+
+function events() {
+  toggle_btn.addEventListener("click", toggleAnimation);
+  hamburger_menu.addEventListener("click", toggleHamburgerMenu);
+}
+
+events();
