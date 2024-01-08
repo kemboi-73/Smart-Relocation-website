@@ -991,3 +991,74 @@ body {
   }
 }
 
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.links li {
+  margin: 0 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust this value based on your design */
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+  }
+
+  .links.show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links ul {
+    padding-top: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .links li {
+    margin: 10px 0;
+  }
+}
