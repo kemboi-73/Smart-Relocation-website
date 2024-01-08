@@ -1187,4 +1187,8 @@ body {
   .menu-toggle {
     display: block;
   }
+
+  .links li {
+    margin: 10px 0;
+  }
 }
