@@ -1099,35 +1099,19 @@ body {
 
 
 
-/* Add this media query at the end of your existing CSS */
-@media (max-width: 768px) {
-  .section__grid {
-    grid-template-columns: 1fr; /* Set the grid to one column for smaller screens */
-  }
-
-  .section__card {
-    width: 100%; /* Make the cards take up the full width */
-    margin-bottom: 2rem; /* Add some space between stacked cards */
-  }
-
-  /* Adjust other styles as needed for better mobile experience */
-  .section__card::before {
-    width: 100%; /* Adjust the width for the circular background */
-  }
-
-  .section__card h4 {
-    margin-top: 2rem; /* Adjust spacing for the card title */
-  }
+/* Styles for devices with hover state (like computers) */
+.section__card:hover {
+  /* Add your hover styles here */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
-/* Add this CSS to provide a smooth transition for mobile users */
-.section__card {
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Adjust the hover styles for mobile users */
+/* Styles for touch devices (like phones) */
 @media (hover: none) {
-  .section__card:hover {
-    transform: none; /* Remove the transform on hover for touch devices */
+  .section__card {
+    /* Add styles suitable for touch devices here */
+    /* For example, you can add a border or background color */
+    border: 2px solid var(--primary-color);
+    background-color: var(--white);
   }
 }
