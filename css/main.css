@@ -1107,10 +1107,16 @@ body {
 
   .section__card {
     width: 100%; /* Make the cards take up the full width */
+    margin-bottom: 2rem; /* Add some space between stacked cards */
   }
 
   /* Adjust other styles as needed for better mobile experience */
   .section__card::before {
     width: 100%; /* Adjust the width for the circular background */
   }
+
+  .section__card h4 {
+    margin-top: 2rem; /* Adjust spacing for the card title */
+  }
 }
+
