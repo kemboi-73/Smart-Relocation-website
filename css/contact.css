@@ -1,13 +1,8 @@
 
-@media (max-width: 768px) {
-    .section__grid {
-      grid-template-columns: 1fr; /* Set the grid to one column for smaller screens */
-    }}
 body{
     background-image: url('images/photo5.jpeg');
     width: 100%;
-    height: 100vh;
-    background-size: 100% 110vh;
+    height: auto;
     position: relative;
     background-repeat: no-repeat;
 }
@@ -23,7 +18,7 @@ header h1{
 }
 .empty{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: rgba(0,0,0,0.5);
     position: absolute;
     top: 0px;
@@ -58,7 +53,7 @@ section i{
     margin-left: 50%;
     justify-content: center;
     align-items: center;
-    min-height: 110vh;
+    min-height: auto;
 }
 
 .form .contact-form input{
@@ -122,39 +117,34 @@ section i{
 .media li{
     margin: 20px 30px;
 }
-@media screen and (max-width: 900px){
-    body{
+@media screen and (max-width: 900px) {
+    body {
         background-repeat: repeat-y;
         overflow: auto;
     }
-    header{
-        position: absolute;
-        left: 0;
-        top: 20%;
+    header {
+        position: static; /* Change this line to static */
         width: 100%;
     }
-    .empty{
-        height: 210vh;
+    .empty {
+        height: auto; /* Change this line to auto */
     }
-    .form{
-        position: absolute;
-        top: 100vh;
-        margin-left: 10%;
+    .form {
+        position: static; /* Change this line to static */
+        margin-left: 0;
     }
-    .content-form{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0;
-        margin-top: 53vh;
-        margin-left: 10vh;
+    .content-form {
+        display: block; /* Change this line to block */
+        margin-top: 2rem; /* Adjust this value accordingly */
+        margin-left: 0;
     }
-    .content section{
-        margin-top: 0vh;
-        margin-left: 0vh;
+    .content section {
+        margin-top: 0;
+        margin-left: 0;
     }
-    .media{
-        position: absolute;
-        top: 190vh;
-        right: 30px;
+    .media {
+        position: static; /* Change this line to static */
+        margin-top: 2rem; /* Adjust this value accordingly */
+        margin-right: 0;
     }
 }
