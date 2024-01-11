@@ -992,7 +992,7 @@ body {
 }
 
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
-* {
+/** {
     padding: 0;
     margin: 0;
 }
@@ -1003,7 +1003,7 @@ body {
 
 html {
     background-color: #eaf0f2;
-}
+}*/
 
 header {
     text-align: center;
