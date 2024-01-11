@@ -1,11 +1,8 @@
-*{
-    padding: 0;
-    margin: 0;
-    color: #fff;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    border: none;
-}
+
+@media (max-width: 768px) {
+    .section__grid {
+      grid-template-columns: 1fr; /* Set the grid to one column for smaller screens */
+    }}
 body{
     background-image: url('images/photo5.jpeg');
     width: 100%;
