@@ -993,7 +993,7 @@ body {
 
 /*footer*/
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
-/** {
+* {
     padding: 0;
     margin: 0;
 }
@@ -1019,7 +1019,7 @@ header h2 {
 
 header span {
     color: #eaa03f;
-}*/
+}
 
 /* The footer is fixed to the bottom of the page */
 
