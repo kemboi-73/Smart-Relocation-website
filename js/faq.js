@@ -1,20 +1,11 @@
-const plus = document.querySelectorAll(".plus");
-const cross = document.querySelectorAll(".cross");
-const hidden = document.querySelectorAll(".hidden");
-const para = document.querySelectorAll(".para");
+const buttons = document.querySelectorAll('button');
 
-for (let i = 0; i < plus.length; i++) {
-  plus[i].addEventListener("click", function () {
-    plus[i].classList.toggle("hidden");
-    cross[i].classList.toggle("hidden");
-    para[i].classList.toggle("hidden");
-  });
-}
+buttons.forEach( button =>{
+    button.addEventListener('click',()=>{
+        const faq = button.nextElementSibling;
+        const icon = button.children[1];
 
-for (let i = 0; i < cross.length; i++) {
-  cross[i].addEventListener("click", function () {
-    cross[i].classList.toggle("hidden");
-    plus[i].classList.toggle("hidden");
-    para[i].classList.toggle("hidden");
-  });
-}
+        faq.classList.toggle('show');
+        icon.classList.toggle('rotate');
+    })
+} )
